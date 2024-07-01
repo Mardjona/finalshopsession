@@ -1,0 +1,158 @@
+<Window 
+	xmlns="https://github.com/avaloniaui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1000"
+	x:Class="finalshopsession.RedWindow"
+	x:CompileBindings="False"
+	WindowState="Maximized"
+	Title="RedWindow"
+	Background="Olive">
+	<Grid>
+		<StackPanel HorizontalAlignment="Stretch">
+				<Grid
+					ColumnDefinitions="*,*,*,*"
+					RowDefinitions="*,*,*,*,*,*,*,*,*,*">
+					<!--Заголовок-->
+					<TextBlock
+						Name="tblock_panelHeader"
+						Grid.ColumnSpan="1"
+						HorizontalAlignment="Center"
+						FontSize="40" FontWeight="SemiLight"
+						Margin="0 15 0 80"/>
+					<StackPanel
+						Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="3">
+						<!--ID-->
+						<TextBlock
+							Name="tblock_id"
+							FontSize="" FontWeight="Thin"
+							Margin="45 0"/>
+						<!--Название-->
+						<TextBlock
+							Text="Наименование товара:"
+							FontSize="20" 
+							Margin="10 0"/>
+						<TextBox
+							Name="tbox_pName"
+							Margin="10 10"/>
+						<TextBlock Text="Описание" FontSize="20" 
+						           Margin="10 0"></TextBlock>
+						<TextBox
+							Name="tbox_pDescription"
+							Margin="10"
+							Height="30"
+							TextWrapping="Wrap"/>
+						
+						<!--Производитель-->
+						<TextBlock
+							Text="Производитель:"
+							FontSize="20" 
+							Margin="10 0"/>
+						<TextBox
+							Name="tbox_pSupplier"
+							Margin="10 10"/>
+						<!--Количество-->
+						<TextBlock
+							Text="Количество:"
+							FontSize="20" 
+							Margin="10 0"/>
+						<TextBox
+							Name="tbox_pQuantity"
+							Margin="10 10"/>
+						<!--Стоимость-->
+						<TextBlock
+							Text="Стоимость:"
+							FontSize="20" 
+							Margin="10 0"/>
+						<TextBox
+							Name="tbox_pPrice"
+							Margin="10 10"/>
+						<!--Категория-->
+						<StackPanel
+							Orientation="Horizontal">
+							<StackPanel>
+								<TextBlock
+									Text="Единицы измерения:"
+									FontSize="20" 
+									Margin="10 0 0 10"/>
+								<ComboBox
+									Name="cbox_measurements"
+									FontSize="18"
+									Margin="10 0"/>
+							</StackPanel>
+							<StackPanel>
+								<TextBlock
+									Text="Категория:"
+									FontSize="20" 
+									Margin="10 0 0 10"/>
+								<ComboBox
+									Name="cbox_cathegories"
+									FontSize="18"
+									Margin="10 0"/>
+							</StackPanel>
+						</StackPanel>						
+					</StackPanel>
+					<StackPanel
+						Grid.Row="1" Grid.Column="2"
+						Grid.ColumnSpan="2" Grid.RowSpan="3">
+						<!--Описание-->
+						
+					
+						<!--Изображение-->
+						<TextBlock
+							Text="Фото"
+							FontSize="20" 
+							Margin="10 0"/>
+						<StackPanel
+							Orientation="Vertical" Margin="10">
+							<!--Превью изображения-->
+							
+								<Image
+									Name="img_preview"
+									IsVisible="False"
+									Height="120"/>
+								<TextBlock
+									Name="tblock_preview"
+									IsVisible="False"
+									HorizontalAlignment="Center"/>
+							
+							<!--Кнопки для  выбора и удаления изображения-->
+							<StackPanel Orientation="Horizontal">
+								<Button 
+									Name="btn_imgAdd"
+									Content="Добавить фото"
+									Margin="10"
+									Click="ImageSelection"/>
+								<Button
+									Name="btn_imgDel"
+									Margin="10"
+									Content="Удалить фото"
+									Click="ImageSelection"/>
+							</StackPanel>
+						</StackPanel>
+					</StackPanel>
+				
+					<Button
+						Name="btn_cancel"
+						Click="RedActivity"
+						Background="DarkRed"
+						Content="Отмена"
+						FontSize="20" HorizontalAlignment="Right"
+						VerticalAlignment="Top" 
+						Grid.Row="4" Grid.ColumnSpan="2"/>
+					<Button
+						Name="btn_confirm"
+						Click="RedActivity"
+						FontSize="20" HorizontalAlignment="Left"
+						VerticalAlignment="Top" 
+						Grid.Column="2"
+						Content="Сохранить"
+						Background="DarkRed"
+						Grid.Row="4" Grid.ColumnSpan="2"/>			
+			
+				</Grid>
+			</StackPanel>
+		
+	</Grid>
+</Window>

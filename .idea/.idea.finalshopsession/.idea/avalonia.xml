@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="finalshopsession/CartWindow.axaml" value="finalshopsession/finalshopsession.csproj" />
+        <entry key="finalshopsession/ListWindow.axaml" value="finalshopsession/finalshopsession.csproj" />
+        <entry key="finalshopsession/MainWindow.axaml" value="finalshopsession/finalshopsession.csproj" />
+        <entry key="finalshopsession/RedWindow.axaml" value="finalshopsession/finalshopsession.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
